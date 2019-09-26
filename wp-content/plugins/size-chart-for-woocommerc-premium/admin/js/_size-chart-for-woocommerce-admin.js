@@ -172,7 +172,7 @@ modal = '';
 							$('ul#size-chart-checklist-all').empty();
 							$.each(response.found_products, function(loopKey, loopValue) {
 								subLiTag = $('<li/>');
-								subATag = $('<a />', {'href': loopValue.href.replace('&#038;', '&'), text: loopValue.title});
+								subATag = $('<a />', {'href': loopValue.href, text: loopValue.title});
 								subATag.appendTo(subLiTag);
 								subLiTag.appendTo('ul#size-chart-checklist-all');
 							});

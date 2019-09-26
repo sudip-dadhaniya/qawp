@@ -10,6 +10,11 @@
  * @subpackage Size_Chart_For_Woocommerce/includes
  */
 
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 /**
  * Fired during plugin deactivation.
  *

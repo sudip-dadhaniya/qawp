@@ -13,6 +13,11 @@
  * @subpackage Size_Chart_For_Woocommerce/includes
  */
 
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 /**
  * The core plugin class.
  *
@@ -77,7 +82,7 @@ class Size_Chart_For_Woocommerce {
 		$this->define_public_hooks();
 
 		$prefix = is_network_admin() ? 'network_admin_' : '';
-		add_filter( "{$prefix}plugin_action_links_" . SIZE_CHART_PLUGIN_BASENAME, array( $this, 'plugin_action_links' ), 10, 4 );
+		add_filter( "{$prefix}plugin_action_links_" . plugin_dir_path( plugin_basename( dirname( __FILE__ ) ) ) . 'size-chart-for-woocommerce.php', array( $this, 'plugin_action_links_callback' ), 10, 4 );
 	}
 
 	/**
@@ -99,16 +104,21 @@ class Size_Chart_For_Woocommerce {
 	private function load_dependencies() {
 
 		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
+		 * The class responsible for orchestrating the actions and filters of the core plugin.
+		 *
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-size-chart-for-woocommerce-loader.php';
 
 		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
+		 * The class responsible for defining internationalization functionality of the plugin.
+		 *
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-size-chart-for-woocommerce-i18n.php';
+
+		/**
+		 * The class responsible for defining internationalization functionality of the plugin.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-size-chart-for-woocommerce-functions.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -116,8 +126,8 @@ class Size_Chart_For_Woocommerce {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-size-chart-for-woocommerce-admin.php';
 
 		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
+		 * The class responsible for defining all actions that occur in the public-facing side of the site.
+		 *
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-size-chart-for-woocommerce-public.php';
 
@@ -150,39 +160,53 @@ class Size_Chart_For_Woocommerce {
 	private function define_admin_hooks() {
 		$plugin_admin = new Size_Chart_For_Woocommerce_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->add_action( 'init', $plugin_admin, 'size_chart_register_post_type_chart' );
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'size_chart_menu' );
-		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'size_chart_add_meta_box' );
-		$this->loader->add_action( 'save_post', $plugin_admin, 'product_select_size_chart_save' );
-		$this->loader->add_action( 'save_post', $plugin_admin, 'size_chart_content_meta_save' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'size_chart_meta_image_enqueue' );
-		$this->loader->add_action( 'admin_action_size_chart_duplicate_post', $plugin_admin, 'size_chart_duplicate_post' );
-		$this->loader->add_action( 'admin_action_size_chart_preview_post', $plugin_admin, 'size_chart_preview_post' );
-		$this->loader->add_action( 'wp_ajax_size_chart_delete_image', $plugin_admin, 'size_chart_delete_image' );
-		$this->loader->add_action( 'wp_ajax_size_chart_preview_post', $plugin_admin, 'size_chart_preview_post' );
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'welcome_screen_do_activation_redirect' );
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'welcome_pages_screen' );
-		$this->loader->add_action( 'size_chart_about', $plugin_admin, 'size_chart_about' );
-		$this->loader->add_action( 'admin_head', $plugin_admin, 'welcome_screen_remove_menus' );
-		$this->loader->add_action( 'admin_footer', $plugin_admin, 'size_chart_preview_dialog_box' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'size_chart_publish_button_disable' );
-		$this->loader->add_filter( 'post_row_actions', $plugin_admin, 'size_chart_remove_row_actions', 10, 2 );
-		$this->loader->add_filter( 'manage_edit-size-chart_columns', $plugin_admin, 'size_chart_column' );
-		$this->loader->add_filter( 'manage_size-chart_posts_custom_column', $plugin_admin, 'size_chart_manage_column' );
-		$this->loader->add_filter( 'manage_size-chart_posts_custom_column', $plugin_admin, 'size_chart_manage_column' );
-		$this->loader->add_action( 'restrict_manage_posts', $plugin_admin, 'size_chart_filter_default_template' );
-		$this->loader->add_filter( 'parse_query', $plugin_admin, 'size_chart_filter_default_template_query' );
-		$this->loader->add_action( 'trashed_post', $plugin_admin, 'size_chart_selected_chart_delete' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles_callback' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts_callback' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'size_chart_meta_image_enqueue_callback' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'size_chart_publish_button_disable_callback' );
+
+		$this->loader->add_action( 'init', $plugin_admin, 'size_chart_register_post_type_chart_callback' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'welcome_screen_do_activation_redirect_callback' );
+		if ( ! get_option( 'default_size_chart' ) ) {
+			$this->loader->add_action( 'admin_init', $plugin_admin, 'size_chart_pro_default_posts_callback' );
+		}
+
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'size_chart_menu_callback' );
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'welcome_pages_screen_callback' );
+
+		$this->loader->add_action( 'admin_head', $plugin_admin, 'welcome_screen_remove_menus_callback' );
+		$this->loader->add_action( 'admin_footer', $plugin_admin, 'size_chart_preview_dialog_box_callback' );
+
+		$this->loader->add_action( 'add_meta_boxes', $plugin_admin, 'size_chart_add_meta_box_callback' );
+
+		$this->loader->add_action( 'save_post', $plugin_admin, 'product_select_size_chart_save_callback' );
+		$this->loader->add_action( 'save_post', $plugin_admin, 'size_chart_content_meta_save_callback' );
+		$this->loader->add_action( 'save_post', $plugin_admin, 'size_chart_save_in_products_callback' );
+
+		$this->loader->add_action( 'admin_action_size_chart_duplicate_post', $plugin_admin, 'size_chart_duplicate_post_callback' );
+		$this->loader->add_action( 'admin_action_size_chart_preview_post', $plugin_admin, 'size_chart_preview_post_callback' );
+
+		$this->loader->add_action( 'wp_ajax_size_chart_delete_image', $plugin_admin, 'size_chart_delete_image_callback' );
+		$this->loader->add_action( 'wp_ajax_size_chart_preview_post', $plugin_admin, 'size_chart_preview_post_callback' );
+		$this->loader->add_action( 'wp_ajax_size_chart_search_chart', $plugin_admin, 'size_chart_search_chart_callback' );
+		$this->loader->add_action( 'wp_ajax_size_chart_product_assign', $plugin_admin, 'size_chart_product_assign_callback' );
+		$this->loader->add_action( 'wp_ajax_size_chart_quick_search_products', $plugin_admin, 'size_chart_quick_search_products_callback' );
+
+		$this->loader->add_filter( 'manage_edit-size-chart_columns', $plugin_admin, 'size_chart_column_callback' );
+		$this->loader->add_filter( 'manage_size-chart_posts_custom_column', $plugin_admin, 'size_chart_manage_column_callback' );
+		$this->loader->add_filter( 'manage_size-chart_posts_custom_column', $plugin_admin, 'size_chart_manage_column_callback' );
+
+		$this->loader->add_action( 'size_chart_about', $plugin_admin, 'size_chart_about_callback' );
+		$this->loader->add_filter( 'post_row_actions', $plugin_admin, 'size_chart_remove_row_actions_callback', 10, 2 );
+		$this->loader->add_action( 'restrict_manage_posts', $plugin_admin, 'size_chart_filter_default_template_callback' );
+		$this->loader->add_filter( 'parse_query', $plugin_admin, 'size_chart_filter_default_template_query_callback' );
+		$this->loader->add_action( 'trashed_post', $plugin_admin, 'size_chart_selected_chart_delete_callback' );
+
 		$get_post_type = filter_input( INPUT_GET, 'post_type', FILTER_SANITIZE_STRING );
 		if ( ! empty( $get_post_type ) && ( 'size-chart' === $get_post_type ) ) {
-			$this->loader->add_filter( 'admin_footer_text', $plugin_admin, 'size_chart_pro_admin_footer_review' );
-			$this->loader->add_action( 'admin_notices', $plugin_admin, 'size_chart_pro_admin_notice_review' );
+			$this->loader->add_filter( 'admin_footer_text', $plugin_admin, 'size_chart_pro_admin_footer_review_callback' );
+			$this->loader->add_action( 'admin_notices', $plugin_admin, 'size_chart_pro_admin_notice_review_callback' );
 		}
-		$this->loader->add_action( 'admin_head-post.php', $plugin_admin, 'size_chart_pro_hide_publishing_actions' );
-		$this->loader->add_action( 'admin_head-post-new.php', $plugin_admin, 'size_chart_pro_hide_publishing_actions' );
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'size_chart_pro_default_posts' );
 	}
 
 	/**
@@ -196,11 +220,11 @@ class Size_Chart_For_Woocommerce {
 
 		$plugin_public = new Size_Chart_For_Woocommerce_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-		$this->loader->add_filter( 'woocommerce_product_tabs', $plugin_public, 'size_chart_custom_product_tab' );
-		$this->loader->add_action( 'woocommerce_before_single_product', $plugin_public, 'size_chart_popup_button_position' );
-		$this->loader->add_filter( 'woocommerce_paypal_args', $plugin_public, 'paypal_bn_code_filter', 99, 1 );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles_callback' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts_callback' );
+		$this->loader->add_filter( 'woocommerce_product_tabs', $plugin_public, 'size_chart_custom_product_tab_callback' );
+		$this->loader->add_action( 'woocommerce_before_single_product', $plugin_public, 'size_chart_popup_button_position_callback' );
+		$this->loader->add_filter( 'woocommerce_paypal_args', $plugin_public, 'paypal_bn_code_filter_callback', 99, 1 );
 	}
 
 	/**
@@ -212,7 +236,7 @@ class Size_Chart_For_Woocommerce {
 	 * @return array associative array of plugin action links
 	 * @since 1.0.0
 	 */
-	public function plugin_action_links( $actions, $plugin_file, $plugin_data, $context ) {
+	public function plugin_action_links_callback( $actions, $plugin_file, $plugin_data, $context ) {
 		$custom_actions = array(
 			'configure' => sprintf( '<a href="%s">%s</a>', admin_url( 'edit.php?post_type=size-chart&page=size_chart_setting_page' ), __( 'Settings', 'size-chart-for-woocommerce' ) ),
 			'docs'      => sprintf( '<a href="%s" target="_blank">%s</a>', SIZE_CHART_PLUGIN_DOC_URL, __( 'Docs', 'size-chart-for-woocommerce' ) ),

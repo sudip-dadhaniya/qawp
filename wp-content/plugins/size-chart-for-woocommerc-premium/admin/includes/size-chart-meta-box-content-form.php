@@ -9,31 +9,31 @@
  * @package    size-chart-for-woocommerce
  * @subpackage size-chart-for-woocommerce/admin/includes
  */
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 // Add an nonce field so we can check for it later.
 wp_nonce_field( 'size_chart_inner_custom_box', 'size_chart_inner_custom_box' );
-$post_id = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT );
+$size_cart_post_id = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT );
 
 // Use get_post_meta to retrieve an existing value from the database.
-$chart_label      = get_post_meta( $post_id, 'label', true );
-$chart_img        = get_post_meta( $post_id, 'primary-chart-image', true );
-$chart_position   = get_post_meta( $post_id, 'position', true );
-$chart_categories = (array) get_post_meta( $post_id, 'chart-categories', true );
-$chart_table      = get_post_meta( $post_id, 'chart-table', true );
-$table_style      = get_post_meta( $post_id, 'table-style', true );
+$chart_label      = size_chart_get_label_by_chart_id( $size_cart_post_id );
+$chart_position   = size_chart_get_position_by_chart_id( $size_cart_post_id );
+$chart_table      = size_chart_get_chart_table_by_chart_id( $size_cart_post_id, false );
+$table_style      = size_chart_get_chart_table_style_by_chart_id( $size_cart_post_id );
+$chart_categories = size_chart_get_categories( $size_cart_post_id );
 
 // Display the form, using the current value.
-$img               = wp_get_attachment_image_src( $chart_img, 'thumbnail' );
-$image_url         = plugins_url( 'images/chart-img-placeholder.jpg', dirname( __FILE__ ) );
-$img_width         = '';
-$img_height        = '';
-$close_icon_enable = false;
+$size_chart_img    = size_chart_get_primary_chart_image_data_by_chart_id( $size_cart_post_id );
+$image_id          = $size_chart_img['attachment_id'];
+$image_url         = $size_chart_img['url'];
+$img_width         = $size_chart_img['width'];
+$img_height        = $size_chart_img['height'];
+$close_icon_enable = $size_chart_img['close_icon_status'];
 
-if ( $img[0] ) {
-	$image_url         = $img[0];
-	$img_width         = $img[1];
-	$img_height        = $img[2];
-	$close_icon_enable = true;
-}
 ?>
 <div id="size-chart-meta-fields">
     <div id="field">
@@ -46,14 +46,14 @@ if ( $img[0] ) {
         <div class="field-title"><h4><?php esc_html_e( 'Primary Chart Image', 'size-chart-for-woocommerce' ); ?></h4></div>
         <div class="field-description"><?php esc_html_e( 'Add/Edit primary chart image below', 'size-chart-for-woocommerce' ); ?></div>
         <div class="field-item">
-            <input type="hidden" name="primary-chart-image" id="primary-chart-image" value="<?php echo esc_attr( $chart_img ); ?>"/></div>
+            <input type="hidden" name="primary-chart-image" id="primary-chart-image" value="<?php echo esc_attr( $image_id ); ?>"/></div>
 
         <div id="field-image">
             <div class="field_image_box">
-                <img src="<?php echo esc_url( $image_url ); ?>" width="<?php esc_attr_e( $img_width ); ?>" height="<?php esc_attr_e( $img_height ); ?>" class="<?php esc_attr_e( $post_id ); ?>" id="meta_img"/>
+                <img src="<?php echo esc_url( $image_url ); ?>" width="<?php esc_attr_e( $img_width ); ?>" height="<?php esc_attr_e( $img_height ); ?>" class="<?php esc_attr_e( $size_cart_post_id ); ?>" id="meta_img"/>
 
 				<?php if ( true === $close_icon_enable ) { ?>
-                    <a id="<?php esc_attr_e( $post_id ); ?>" class="delete-chart-image">
+                    <a id="<?php esc_attr_e( $size_cart_post_id ); ?>" class="delete-chart-image">
                         <img src="<?php echo esc_url( plugins_url( 'images/close-icon.png', dirname( __FILE__ ) ) ); ?>"/>
                     </a>
 				<?php } ?>
@@ -68,11 +68,16 @@ if ( $img[0] ) {
         <div class="field-description"><?php esc_html_e( 'Select categories for chart to appear on.', 'size-chart-for-woocommerce' ); ?></div>
         <div class="field-item">
             <select name="chart-categories[]" id="chart-categories" multiple="multiple">
-				<?php $term = get_terms( 'product_cat', array() ); ?>
-				<?php if ( $term ): foreach ( $term as $cat ) { ?>
-					<?php $selected = in_array( $cat->term_id, $chart_categories, true ) ? 'selected' : ''; ?>
-                    <option value="<?php esc_attr_e( $cat->term_id ); ?>" <?php esc_attr_e( $selected ); ?> ><?php esc_html_e( $cat->name, 'size-chart-for-woocommerce' ); ?></option>
-				<?php } endif; ?>
+				<?php
+				$size_cart_term = get_terms( 'product_cat', array() );
+				if ( ! empty( $size_cart_term ) && ! is_wp_error( $size_cart_term ) ) {
+					foreach ( $size_cart_term as $size_cart_cat ) {
+						$selected = in_array( $size_cart_cat->term_id, $chart_categories, true ) ? 'selected' : ''; ?>
+                        <option value="<?php esc_attr_e( $size_cart_cat->term_id ); ?>" <?php esc_attr_e( $selected ); ?> ><?php esc_html_e( $size_cart_cat->name, 'size-chart-for-woocommerce' ); ?></option>
+						<?php
+					}
+				}
+				?>
 
             </select>
         </div>

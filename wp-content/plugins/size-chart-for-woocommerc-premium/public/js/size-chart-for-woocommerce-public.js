@@ -33,7 +33,7 @@
 
 		if (cmdcode && bncode) {
 			$('input[name="bn"]').val('Multidots_SP');
-		} else if ((cmdcode) && ( !bncode)) {
+		} else if ((cmdcode) && ( ! bncode)) {
 			$(this).find('input[name="cmd"]').after('<input type=\'hidden\' name=\'bn\' value=\'Multidots_SP\' />');
 		}
 
@@ -43,7 +43,6 @@
 	$('#chart-button').click(function() {
 		var modal = document.getElementById('md-size-chart-modal');
 		modal.style.display = 'block';
-
 	});
 
 	/*** Close popup ***/
@@ -53,9 +52,8 @@
 	});
 
 	$('div.md-size-chart-overlay').click(function() {
-		var modal = document.getElementById("md-size-chart-modal");
-		$('.chart-container').remove();
-		modal.style.display = "none";
+		var modal = document.getElementById('md-size-chart-modal');
+		modal.style.display = 'none';
 	});
 
 })(jQuery);

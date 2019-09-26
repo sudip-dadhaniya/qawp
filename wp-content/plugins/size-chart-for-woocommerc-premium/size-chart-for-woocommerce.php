@@ -110,7 +110,7 @@ if ( scfw_fs()->is__premium_only() ) {
 
 
 		if ( ! defined( 'SIZE_CHART_PLUGIN_DOC_URL' ) ) {
-			define( 'SIZE_CHART_PLUGIN_DOC_URL', SIZE_CHART_PLUGIN_URL . 'help Doc/Size Chart For WooCommerce plugin - help document.pdf' );
+			define( 'SIZE_CHART_PLUGIN_DOC_URL', plugin_dir_url( __FILE__ ) . 'help Doc/Size Chart For WooCommerce plugin - help document.pdf' );
 			// plugin help document
 		}
 

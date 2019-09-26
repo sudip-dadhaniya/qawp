@@ -10,21 +10,30 @@
  * @package    size-chart-for-woocommerce
  * @subpackage size-chart-for-woocommerce/admin/includes
  */
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 // Use get_post_meta to retrieve an existing value of chart 1 from the database.
-$cat_id = get_post_meta( $post->ID, 'chart-categories', true );
+$size_cart_cat_id = size_chart_get_categories( $post->ID );
 ?>
 <div id="size-chart-meta-fields">
     <div id="assign-category">
         <div class="assign-item">
-			<?php $term = get_terms( 'product_cat', array() ); ?>
+			<?php $size_cart_term = get_terms( 'product_cat', array() ); ?>
             <ul>
 				<?php
-				if ( ! empty( $cat_id ) ) {
-					if ( ! empty( $term ) ) {
-						foreach ( $term as $cat ) {
-							if ( in_array( $cat->term_id, $cat_id, true ) ) { ?>
-                                <li><?php esc_html_e( $cat->name, 'size-chart-for-woocommerce' ); ?></li>
-							<?php }
+				if ( ! empty( $size_cart_cat_id ) ) {
+					if ( ! empty( $size_cart_term ) ) {
+						foreach ( $size_cart_term as $size_cart_cat ) {
+							if ( in_array( $size_cart_cat->term_id, $size_cart_cat_id, true ) ) {
+								printf(
+									"<li>%s</li>",
+									esc_html__( $size_cart_cat->name, 'size-chart-for-woocommerce' )
+								);
+							}
 						}
 					}
 				} else {
