@@ -42,7 +42,7 @@ function wqr_get_product_thumbnail_src($product_id) {
             <div class="wqr-awr-title">
                 <h3>
                     <i class="fa fa-newspaper-o"></i>
-					<?php esc_html_e('Selling Item', 'woo-quick-report'); ?>
+					<?php esc_html_e('Line Items', 'woo-quick-report'); ?>
                 </h3>
                 <div class="wqr-awr-title-icons">
                     <div class="wqr-awr-title-icon" data-table="wqr-awr-summary-chart">

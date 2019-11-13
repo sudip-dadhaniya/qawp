@@ -7,7 +7,7 @@ if(!defined('ABSPATH')) exit;
             <div class="wqr-awr-title">
                 <h3>
                     <i class="fa fa-check"></i>
-					<?php esc_html_e('Order Status', 'woo-quick-report'); ?>
+					<?php esc_html_e('Status', 'woo-quick-report'); ?>
                 </h3>
                 <div class="wqr-awr-title-icons">
                     <div class="wqr-awr-title-icon" data-table="wqr-awr-summary-chart">

@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+(function ($) {
     "use strict";
     $(window).load(function () {
         $('form').each(function () {
@@ -12,4 +12,4 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-});
+})(jQuery);
