@@ -1,0 +1,35 @@
+Product finder pro Plugin changes / functionality changes
+Fixes:
+1. Fixed Shortcode html issue.
+2. Fixed wizard attribute selection issue.
+3. Fixed the product listing small issue.
+4. Fixed the pagination html issues.
+
+Enhancement:
+1. Change manage list wizard UI.
+2. Change add new wizard UI.
+3. Change wizard configuration UI.
+4. Change the wizard html on front side.
+5. Change shortcode section in Admin side.
+6. Change status switch button UI.
+7. Add question and option UI and functionality improvements.
+8. Add pagination for "top products" and "Products meeting most of your requirements".
+
+Remove:
+1 Remove add new question redirection.
+2 Remove wizard setting in "Congratulations" and "Message Title" fields.
+3 Remove the checkbox for multiple question deletion.
+4.Remove sorting from manage list.
+
+Ignore third-party files.
+Admin side
+1. woocommerce-product-finder-pro/admin/css/chosen.css
+2. woocommerce-product-finder-pro/admin/css/font-awesome.min.css
+3. woocommerce-product-finder-pro/admin/css/jquery-ui.min.css
+4. woocommerce-product-finder-pro/admin/css/webkit.css
+5. woocommerce-product-finder-pro/admin/js/chosen.jquery.js
+6. woocommerce-product-finder-pro/admin/js/jquery.tablesorter.js
+
+Add third party file.
+Admin side
+1. woocommerce-product-finder-pro/admin/css/select2.css
