@@ -1,0 +1,77 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+#dotsstoremain .product_cost_left_div{float:left}
+#dotsstoremain .half_width{width:50%}
+#dotsstoremain .option_uploader_image.button{margin-right:15px}
+#dotsstoremain .wpfp-head th{vertical-align:middle;padding-left:21px}
+#dotsstoremain #wizard-listing input#wpfp-shortcode{font-size:12px;box-shadow:none;padding:4px 8px;margin:0;color:#444;cursor:pointer}
+#dotsstoremain #wizard-listing input#wpfp-shortcode:focus{border-color:#5b9dd9;box-shadow:0 0 2px rgba(30, 140, 190, 0.8);outline:2px solid transparent;cursor:grabbing}
+#dotsstoremain .wpfp-question-main-listing table.form-table{margin-top:0}
+#dotsstoremain .wpfp-question-main-listing a.delete{color:#ff0000;font-weight:400;line-height:22px;text-decoration:none;position:relative;float:right;background:transparent;font-size:16.5px;border:navajowhite;margin:0;padding:0;background-position:6px 5px!important}
+#dotsstoremain .wpfp-main-table h3{font-size:15px;text-align:left;font-weight:bold;color:#333;border:1px solid #ddd;padding:16px;border-bottom:0;background:#f5f5f5;margin:0;cursor:pointer}
+#dotsstoremain .wpfp-question-wrapper{display:none}
+#dotsstoremain .wpfp-option-wrapper{display:none}
+#dotsstoremain #wpfp-wizard-add-form span.select2.select2-container input,#dotsstoremain #wpfp-wizard-edit-form span.select2.select2-container input{border:inherit;height:inherit;line-height:inherit}
+#dotsstoremain .wpfp-help-tip{color:#666;display:inline-block;font-size:1.1em;font-style:normal;height:16px;line-height:16px;position:relative;vertical-align:middle;width:16px}
+#dotsstoremain .wpfp-help-tip::after{font-family:'Dashicons', serif;speak:none;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;margin:0;text-indent:0;position:absolute;top:0;left:0;width:100%;height:100%;text-align:center;content:"\f223";cursor:help}
+#dotsstoremain .wpfp-help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373}
+#dotsstoremain .wpfp-has-error .wpfp-help-block{color:#ff0000}
+#dotsstoremain .wpfp-main-table .wpfp-has-question-box-error h2,#dotsstoremain .wpfp-main-table .wpfp-has-option-box-error h3{-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075);border:1px solid #ff0000}
+#dotsstoremain .wpfp-select-error .select2-selection__rendered{border:1px solid #ff0000;border-radius:4px;line-height:26px}
+#dotsstoremain .wpfp-question-main-wrapper.wpfp-question-toggle-open h2,#dotsstoremain .wpfp-question-main-wrapper .wpfp-option-toggle-open h3{background:#0085ba;color:#fff}
+#dotsstoremain .wpfp-option-toggle-open h3{border-left:0;border-top:0}
+#dotsstoremain .page-numbers:hover{background:#fafafa;border-color:#999;color:#23282d}
+#dotsstoremain .page-numbers{display:inline-block;vertical-align:baseline;min-width:28px;min-height:28px;margin:0;padding:0 4px;font-size:16px;line-height:1.5;text-align:center;border:1px solid hsl(0, 0%, 80%);font-weight:400;box-shadow:0 1px 0 #ccc;-webkit-appearance:none;border-radius:3px;white-space:nowrap;cursor:pointer;box-sizing:border-box;height:28px}
+#dotsstoremain .paging-navigation{color:hsl(0, 0%, 33%);cursor:default;height:28px;margin-top:3px;text-align:center}
+#dotsstoremain .wpfp-main-table .wpfp-btn{z-index:99999;padding:4px 8px;text-decoration:none;border:1px solid #ccc;-webkit-border-radius:2px;border-radius:2px;background:#f7f7f7;text-shadow:none;font-weight:600;font-size:13px;line-height:normal;color:#0073aa;cursor:pointer;outline:0;margin:0 15px;vertical-align:middle}
+#dotsstoremain .wpfp-main-table .wpfp-btn:hover{border-color:#008ec2;background:#00a0d2;color:#fff;-webkit-transition:0.2s all;-moz-transition:0.2s all;-o-transition:0.2s all;transition:0.2s all}
+#dotsstoremain .wpfp-image-preview img{width:100px;height:100px}
+#dotsstoremain .wpfp-main-table .wp-picker-container{display:inline-block}
+#dotsstoremain .wpfp-question-main-listing .wpfp-tips{width:17px;height:26px;cursor:move;float:right;font-size:15px;font-weight:400;margin-right:0.5em;text-align:center;vertical-align:middle;visibility:visible}
+#dotsstoremain .wpfp-question-main-listing .wpfp-tips::before{content:"\f333";font-family:Dashicons, serif;text-align:center;line-height:28px;color:#999;display:block;width:17px;float:left;height:100%}
+#dotsstoremain .wpfp-question-main-listing .wpfp-tips:hover::before{color:#777}
+#dotsstoremain .wpfp-main-table .product_header_title h2,#dotsstoremain .wpfp-question-main-wrapper h2{font-size:20px;text-align:left;font-weight:bold;color:#333;border:1px solid #ddd;padding:16px;background:#f5f5f5;margin:0;display:block}
+#dotsstoremain .wpfp-question-main-wrapper h2 .handlediv,#dotsstoremain .wpfp-options-box h3 .handlediv{visibility:visible;padding:0;border:0;background:none;cursor:pointer;width:18px;height:26px;float:right;margin-right:0.5em;text-align:center;vertical-align:middle}
+#dotsstoremain .wpfp-question-main-wrapper h2 .handlediv::before,#dotsstoremain .wpfp-options-box h3 .handlediv::before{cursor:pointer;display:inline-block;font:400 20px/1 Dashicons, serif;line-height:0.5;padding:8px 10px;position:relative;right:12px;top:0;content:"\f140"}
+#dotsstoremain .wpfp-question-main-listing .wpfp-question-main-wrapper.wpfp-question-toggle-open .wpfp-question-delete,#dotsstoremain .wpfp-question-main-listing .wpfp-options-box.wpfp-option-toggle-open .wpfp-option-delete{color:#fff}
+#dotsstoremain .wpfp-question-main-listing .wpfp-question-main-wrapper.wpfp-question-toggle-open .wpfp-question-tips::before,#dotsstoremain .wpfp-question-main-listing .wpfp-options-box.wpfp-option-toggle-open .wpfp-option-tips::before{color:#fff}
+#dotsstoremain .wpfp-question-main-wrapper.wpfp-question-toggle-open h2 .handlediv::before,#dotsstoremain .wpfp-options-box.wpfp-option-toggle-open h3 .handlediv::before{content:"\f142";color:#fff}
+#dotsstoremain .wpfp-question-main-listing a.delete:hover{text-decoration:underline}
+#dotsstoremain .wpfp-option-header-title{border-bottom:3px solid #0085ba}
+#dotsstoremain .wpfp-options-box{border-left:3px solid #0085ba}
+#dotsstoremain .wpfp-main-table .select2-container .select2-selection--single{border-radius:4px}
+#dotsstoremain .wpfp-switch .wpfp-switch-on{color:#fff;text-shadow:#1f7db1 0 1px 0}
+#dotsstoremain #wpfp-wizard-list-form #wizard-listing tr td:first-child{width:5%}
+#dotsstoremain #wpfp-wizard-list-form table.table-outer tr td:last-child{text-align:center}
+#dotsstoremain #wpfp-wizard-list-form table.table-outer.form-table.all-table-listing.tablesorter tr th:last-child{text-align:center}
+#dotsstoremain .wpfp-switch{display:inline-block;border-radius:5px;cursor:pointer;position:relative;background:#f8f8f8;height:30px;vertical-align:middle;border:#ccc solid 1px;-webkit-transition:background 0.25s ease;-moz-transition:background 0.25s ease;-o-transition:background 0.25s ease;transition:background 0.25s ease}
+#dotsstoremain .wpfp-switch span{display:inline-block;float:left;text-align:center;font-size:13px;line-height:22px;padding:4px 10px;min-width:15px}
+#dotsstoremain .md-switch label.switch .wpfp-switch span{min-width:20px}
+#dotsstoremain .wpfp-switch span i{vertical-align:middle}
+#dotsstoremain .wpfp-switch .wpfp-switch-slider{position:absolute;top:2px;left:2px;bottom:2px;right:50%;z-index:1;background:#fff;border-radius:3px;border:#ccc solid 1px;-webkit-transition:all 0.25s ease;-moz-transition:all 0.25s ease;-o-transition:all 0.25s ease;transition:all 0.25s ease;transition-property:left, right}
+#dotsstoremain .wpfp-switch:hover .wpfp-switch-slider{border-color:#b3b3b3}
+#dotsstoremain .wpfp-switch.-on{background:#309cf3;border-color:#2b9af3}
+#dotsstoremain .wpfp-switch.-on .wpfp-switch-slider{left:50%;right:2px;border-color:#0d84e3}
+#dotsstoremain .wpfp-switch.-on:hover{background:#48a8f4}
+#dotsstoremain .wpfp-switch.-focus .wpfp-switch-slider{border-color:#5b9dd9;box-shadow:0 0 2px rgba(30, 140, 190, 0.5)}
+#dotsstoremain .wpfp-switch.-focus.-on .wpfp-switch-slider{border-color:#185e85;box-shadow:0 0 2px #1f7db1}
+#dotsstoremain .wpfp-switch+span{margin-left:6px}
+#dotsstoremain .wpfp-switch-input{opacity:0;position:absolute;margin:0}
+#dotsstoremain .wpfp-question-main-wrapper.wpfp-has-box-error.wpfp-has-question-box-error.wpfp-question-toggle-open h2,#dotsstoremain .wpfp-options-box.wpfp-has-box-error.wpfp-has-option-box-error.wpfp-option-toggle-open h3{border-width:0 1px 1px 0;border-color:#ddd}
+#dotsstoremain .wpfp-main-table .wpfp-manage-question-h2:first-child,#dotsstoremain .wpfp-main-table .wpfp-manage-option-h3:first-child{background:#d9d9d9;border:rgba(152, 152, 152, 0.5)}
+#dotsstoremain .wpfp-uploader-wrapper{float:left}
+#dotsstoremain #question_background_remove_image_id{margin-left:10px}
+#dotsstoremain .wpfp-wizard-form .wpfp-has-error input{border-color:#ff000069;box-shadow:0 0 2px #ff0000;outline:2px solid transparent}
+#dotsstoremain .wpfp-wizard-form .wpfp-has-error .select2-container--default .select2-selection--single,#dotsstoremain .wpfp-wizard-form .wpfp-has-error .select2-container .select2-selection--multiple{border-color:#ff000069;box-shadow:0 0 2px #ff0000;outline:2px solid transparent}
+.is_disabled .select2-container--disabled span.select2-selection.select2-selection--multiple{border-color:red}
+.wp-core-ui .wpfp-uploader-wrapper .is_disabled{border-color:red!important;border-style:solid}
+.wp-core-ui .wpfp-uploader-wrapper a.is_disabled:first-child{margin-right:15px}
+.wpfp-image-preview.is_disabled img{border-color:red;border-style:solid;border-width:1px}
+.wpfp-btn.is_disabled{pointer-events:none;cursor:default;color:#a0a5aa!important;border-color:red!important;background:#f7f7f7!important;box-shadow:none!important;text-shadow:0 1px 0 #fff!important;transform:none!important}
+#dotsstoremain .wpfp-list-button.is_disabled{border-color:red!important;color:#a0a5aa!important;background:#f7f7f7!important}
+select.wpfp-master.is-disabled{border-color:red}
+.wpfp-master-form.is_disabled_section{border:1px solid red}
+.wpfpro-mastersettings.is_disabled_section h2{color:red}
+.wpfp-master-form.is_disabled_section td.table-whattodo b{color:red}
