@@ -1,0 +1,657 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-01-22 17:45+0530\n"
+"PO-Revision-Date: 2017-08-09 16:00+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:247
+msgid "Product Details Page Tab Title"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:258
+msgid "Order Details Page Tab Title"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:268
+msgid "Attachements Date Label Show"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:273
+#: admin/class-woocommerce-product-attachment-pro-admin.php:678
+#: admin/class-woocommerce-product-attachment-pro-admin.php:774
+#: admin/class-woocommerce-product-attachment-pro-admin.php:918
+#: admin/class-woocommerce-product-attachment-pro-admin.php:998
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:370
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:596
+msgid "Yes"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:274
+#: admin/class-woocommerce-product-attachment-pro-admin.php:679
+#: admin/class-woocommerce-product-attachment-pro-admin.php:776
+#: admin/class-woocommerce-product-attachment-pro-admin.php:919
+#: admin/class-woocommerce-product-attachment-pro-admin.php:999
+#: admin/js/woocommerce-product-attachment-pro-admin.js:1
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:371
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:597
+msgid "No"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:281
+msgid "Show Attachements Icon/Download Button"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:286
+msgid "Default Attachment Icons"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:287
+msgid "Attachment Download Buttton"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:294
+msgid "Product Page Attachements Restrict Downloads"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:299
+msgid "Allow Guest User"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:300
+msgid "Allow Only Loged In User"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:337
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1102
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1243
+msgid "WooCommerce Product Attachment"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:507
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:101
+msgid "Attachments"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:508
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:102
+#: admin/partials/wcpoa-pro-plugin-get-started.php:12
+msgid ""
+"Enhance your customer experience of product pages with downloadable files, "
+"such as technical descriptions, certificates, and licenses, user guides, and "
+"manuals, etc. A plugin will help you to attach/ upload any kind of files "
+"(doc, jpg, videos, pdf) for a customer orders."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:510
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:104
+msgid ""
+"Attachments can be downloadable/viewable on the Order details and/or Product "
+"pages. This will help customers to get more details about products they "
+"purchase."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:580
+#: admin/class-woocommerce-product-attachment-pro-admin.php:827
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:175
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:421
+msgid "Drag to reorder"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:582
+#: admin/class-woocommerce-product-attachment-pro-admin.php:828
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:177
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:422
+msgid "Click to toggle"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:590
+#: admin/class-woocommerce-product-attachment-pro-admin.php:838
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:185
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:433
+msgid "Id"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:591
+#: admin/class-woocommerce-product-attachment-pro-admin.php:839
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:186
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:434
+msgid ""
+"Attachments Id used to identify each product attachment.This value is "
+"automatically generated."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:602
+#: admin/class-woocommerce-product-attachment-pro-admin.php:850
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:197
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:445
+msgid "Attachment Name"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:603
+#: admin/class-woocommerce-product-attachment-pro-admin.php:851
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:198
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:446
+msgid ""
+"Add a product attachment (downloadable files) name like such as technical "
+"descriptions, certificates, and licenses, user guides, and manuals, etc. It "
+"will be displayed in the front end"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:611
+#: admin/class-woocommerce-product-attachment-pro-admin.php:859
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:206
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:454
+msgid "Attachment Description"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:612
+#: admin/class-woocommerce-product-attachment-pro-admin.php:860
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:207
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:455
+msgid ""
+"You can type a short description of the attachment file. So User will get "
+"details about attachment file."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:621
+#: admin/class-woocommerce-product-attachment-pro-admin.php:869
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:215
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:463
+msgid "Upload Attachment"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:624
+#: admin/class-woocommerce-product-attachment-pro-admin.php:872
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:217
+msgid "Upload Attachment File."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:641
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:233
+msgid "File name"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:645
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:237
+msgid "File size"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:664
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:256
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:499
+msgid "No file selected"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:664
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:256
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:499
+msgid "Add File"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:673
+#: admin/class-woocommerce-product-attachment-pro-admin.php:913
+msgid "Show on Product page"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:674
+#: admin/class-woocommerce-product-attachment-pro-admin.php:914
+msgid "On Product Details page show attachment."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:690
+#: admin/class-woocommerce-product-attachment-pro-admin.php:931
+msgid "Variants"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:691
+#: admin/class-woocommerce-product-attachment-pro-admin.php:932
+msgid ""
+"In case of variable product, you can enable attachments only for specific "
+"variants. Leave unselected to apply to all"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:708
+#: admin/class-woocommerce-product-attachment-pro-admin.php:947
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:305
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:544
+msgid "Order status"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:709
+#: admin/class-woocommerce-product-attachment-pro-admin.php:948
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:306
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:545
+msgid ""
+"Select order status for which the attachment(s) will be visible.Leave "
+"unselected to apply to all."
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:717
+#: admin/class-woocommerce-product-attachment-pro-admin.php:954
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:314
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:551
+msgid "Completed"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:724
+#: admin/class-woocommerce-product-attachment-pro-admin.php:959
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:321
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:556
+msgid "On Hold"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:731
+#: admin/class-woocommerce-product-attachment-pro-admin.php:964
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:328
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:561
+msgid "Pending payment"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:738
+#: admin/class-woocommerce-product-attachment-pro-admin.php:969
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:335
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:566
+msgid "Processing"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:745
+#: admin/class-woocommerce-product-attachment-pro-admin.php:974
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:342
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:571
+msgid "Cancelled"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:752
+#: admin/class-woocommerce-product-attachment-pro-admin.php:979
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:349
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:576
+msgid "Failed"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:759
+#: admin/class-woocommerce-product-attachment-pro-admin.php:984
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:356
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:581
+msgid "Refunded"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:768
+#: admin/class-woocommerce-product-attachment-pro-admin.php:993
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:365
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:591
+msgid "Set expire Date "
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:769
+#: admin/class-woocommerce-product-attachment-pro-admin.php:994
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:366
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:592
+msgid "Expires?"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:785
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1005
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:380
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:604
+msgid "Set Date"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:786
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1006
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:381
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:605
+msgid ""
+"If an order is placed after the selected date, the attachments will be no "
+"longer visible for download"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:801
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1020
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:396
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:617
+msgid "Add row"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:802
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1021
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:397
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:618
+msgid "Remove row"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1035
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:630
+msgid "Add Attchment"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1148
+msgid "This Attachment Expire Date Is :: "
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1149
+#: public/class-woocommerce-product-attachment-pro-public.php:681
+msgid "This Attachment Expired"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1150
+msgid "This Attachment Is Never Expire"
+msgstr ""
+
+#: admin/class-woocommerce-product-attachment-pro-admin.php:1242
+msgid "Publish"
+msgstr ""
+
+#: admin/js/pro-wcpoa-input.js:1
+msgid "repeater"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:1
+msgid "unload"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:1
+msgid "are_you_sure"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:1
+msgid "yes"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:1
+msgid "date_picker"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:1
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "date_time_picker"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "file"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "image"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "media"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "restricted"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "expand_details"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "collapse_details"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "relationship"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "validation_successful"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "validation_failed"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "validation_failed_1"
+msgstr ""
+
+#: admin/js/woocommerce-product-attachment-pro-admin.js:2
+msgid "validation_failed_2"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:20
+msgid "Premium Version"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:59
+msgid "Bulk Attachment"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:61
+msgid "About Plugin"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:64
+#: admin/partials/wcpoa-pro-plugin-get-started.php:11
+msgid "Getting Started"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:75
+msgid "WooCommerce Plugins"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:76
+msgid "Wordpress Plugins"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:77
+msgid "Free Plugins"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:78
+msgid "Free Themes"
+msgstr ""
+
+#: admin/partials/header/plugin-header.php:79
+msgid "Contact Support"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:11
+msgid "Important link"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:16
+msgid "Plugin documentation"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:20
+msgid "Support platform"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:24
+msgid "Suggest A Feature"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:28
+msgid "Changelog"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:36
+msgid "OUR POPULAR PLUGINS"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:41
+msgid "Advanced Flat Rate Shipping Method"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:45
+msgid "WooCommerce Conditional Product Fees"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:49
+msgid "Advance Menu Manager"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:53
+msgid "Woo Enhanced Ecommerce Analytics Integration"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:57
+msgid "Advanced Product Size Charts"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:61
+msgid "WooCommerce Blocker – Prevent Fake Orders"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:67
+#: admin/partials/header/plugin-sidebar.php:89
+msgid "VIEW ALL"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:73
+msgid "OUR POPULAR THEMES"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:77
+msgid "Appify – Multipurpose WordPress Theme"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:80
+msgid "Brand Agency – WordPress Theme for Agency"
+msgstr ""
+
+#: admin/partials/header/plugin-sidebar.php:83
+msgid "Meraki - WordPress Theme for Resume"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:265
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:506
+msgid "Select Category"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:266
+msgid "Select category for bulk attachment apply."
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:277
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:518
+msgid "Children categories"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:278
+msgid ""
+"If at least one category has been selected, you can decide to apply the "
+"scheduling rule also to children categories items."
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:282
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:523
+msgid "Apply to selected categories only"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:283
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:524
+msgid "Apply to selected categories and all its children"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:290
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:531
+msgid "Attachment Visibility"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:291
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:532
+msgid "Show on Product Details Page / Order Page."
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:295
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:536
+msgid "Order Details Page"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:296
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:537
+msgid "Product Details Page"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:297
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:538
+msgid "Both"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:466
+msgid "Upload Attachement File."
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:507
+msgid "Categories?"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-bulk-attachement-add.php:519
+msgid ""
+"If at least one category has been selected, you can decide to apply the "
+"scheduling rule also to children categories items"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-plugin-get-started.php:6
+msgid "Thanks For Installing WooCommerce WooCommerce Product Attachment Pro"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-plugin-get-started.php:14
+msgid "Setting Page"
+msgstr ""
+
+#: admin/partials/wcpoa-pro-plugin-get-started.php:18
+msgid "Single Product Attachment "
+msgstr ""
+
+#: admin/partials/wcpoa-pro-plugin-get-started.php:22
+msgid "Bulk Product Attachment"
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:143
+msgid ""
+"<strong>This Attachement is Expired.</strong> You are no longer to download "
+"this attachement."
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:280
+msgid "Please Login To Download Attachment"
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:327
+#: public/class-woocommerce-product-attachment-pro-public.php:328
+#: public/class-woocommerce-product-attachment-pro-public.php:416
+#: public/class-woocommerce-product-attachment-pro-public.php:417
+#: public/class-woocommerce-product-attachment-pro-public.php:667
+#: public/class-woocommerce-product-attachment-pro-public.php:668
+#: public/class-woocommerce-product-attachment-pro-public.php:804
+#: public/class-woocommerce-product-attachment-pro-public.php:805
+msgid "Download"
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:343
+#: public/class-woocommerce-product-attachment-pro-public.php:432
+#: public/class-woocommerce-product-attachment-pro-public.php:680
+#: public/class-woocommerce-product-attachment-pro-public.php:813
+msgid "This Attachment Expiry Date :: "
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:344
+#: public/class-woocommerce-product-attachment-pro-public.php:430
+#: public/class-woocommerce-product-attachment-pro-public.php:811
+msgid "This Attachment Expired."
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:345
+#: public/class-woocommerce-product-attachment-pro-public.php:431
+msgid "This Attachment Never Expires."
+msgstr ""
+
+#: public/class-woocommerce-product-attachment-pro-public.php:682
+msgid "This Attachment Never Expires"
+msgstr ""
